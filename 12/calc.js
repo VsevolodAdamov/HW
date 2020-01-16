@@ -8,5 +8,3 @@ function minutes(hours){//функция перевода часов в мину
  return minutes
 }
 console.log(ollTime)//вывод результата
-
-under_score = 15
