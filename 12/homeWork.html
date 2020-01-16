@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script> const credentials = {
+login: 'admin',
+password: 'qwerty',
+};
+
+const log = prompt("Enter login")
+if(log == credentials.login) {
+    
+    alert("login is already in use.");//вивесть div
+    const pass = prompt("Enter password");
+    if (pass !== credentials.password) {
+        alert('wrong password');//вивесть div
+    } else {
+        alert(`Hello ${log}`);
+    }
+}else{
+    const pass = prompt("Enter password");
+    alert(`Hello ${log},your password is ${pass}`);}//вивесть div
+</script>
+
+</body>
+</html>
