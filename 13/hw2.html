@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+//Исследуйте код, найдите выражения в нём.
+// Расставьте скобки так, что бы код не изменил своего поведения
+// (работал так же как и сейчас)
+
+var a = 5;
+var b, c;
+
+b = (a * 5);
+//b = a * 5
+b = (c = b/2);
+//b = c = b/2
+
+//Сделайте несколько примеров кода, отсутствие ; в которых приводит к синтаксической ошибке
+if (1==1) console.log('1.1'); if (1!==2) console.log("1.2")
+
+
+//Сделайте несколько примеров кода, наличиe или отсутствие ; в которых приводит к логической ошибке
+// (т. е. код выполняется без синтаксических ошибок, но делает не то, что задумано)
+
+
+if ( 2 < 1) console.log('2.1')
+else console.log('2.2')
+console.log('2.3')
+
+//С помощью prompt спросить у пользователя его возраст и подсчитать год рождения.
+// Год рождения вывести с помощью alert.
+
+var age = prompt("Сколько вам лет?","");
+const mdate = new Date()
+mdate.getFullYear() - age
+alert((mdate.getFullYear() - age) + " года рождения")
+
+//С помощью prompt спросить у пользователя температуру в градусах Цельсия и перевести их в Фаренгейты и/или наоборот. 
+var temp = prompt("Сколько градусов по цельсию?");
+alert((temp* (9/5)+32) + " по фаренгейту")
+
+//Сделайте калькулятор для расчета деления нацело двух чисел.
+//Используйте Math.floor или альтернативы.
+
+
+// С помощью prompt узнайте число, введенное пользователем.
+//С помощью if проверьте что число корректно преобразовано из строки.
+//В случае ошибки выведите сообщение Выведите четное число или нет,
+//используя if.
+
+
+
+// ---- синий пояс ----
+//Сделайте калькулятор, который позволит вам исходя из информации о
+//количества этажей в доме и количества квартир на этаже находить
+//подъезд и этаж определенной квартиры по её номеру.
+//Например для 9этажного дома по 4 квартиры на этаж
+// 81 квартира находится на 3м этаже третьего подъезда.
+
+var number = prompt("номер квартиры?");
+
+const flatOnTheFloor = 4;
+const numberOfFloors = 9;
+const inThePorch = flatOnTheFloor * numberOfFloors;
+const porch = number / inThePorch; 
+const ceilPorch = Math.ceil(porch);
+const rotdPorch = number % inThePorch;
+const floor = rotdPorch/flatOnTheFloor;
+
+if (rotdPorch == 0) {
+	const floorEcho = 9;
+	console.log(`${floorEcho} 9 flore`);
+	alert(`${ceilPorch} подъезд, ${floorEcho} этаж, ${number} квартира`);
+} else {
+	if (floor < 1){const floorEcho = 1;
+		alert(`${ceilPorch} подъезд, ${floorEcho} этаж, ${number} квартира`);
+	}else{const floorEcho = Math.ceil(floor);
+	 	alert(`${ceilPorch} подъезд, ${floorEcho} этаж, ${number} квартира`);
+	}
+}
+
+ </script>
+</body>
+</html>
